@@ -1,0 +1,16 @@
+- name: Gather facts about a previously created network by name
+  os_networks_facts:
+    name:  ext_network
+
+- name: Show openstack networks
+  debug:
+    var: openstack_networks
+
+- name: Gather facts about a previously created network by name
+  os_networks_facts:
+    name:  int_network
+
+- name: Show openstack networks
+  debug:
+    var: openstack_networks
+
