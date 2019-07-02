@@ -6,7 +6,7 @@
   debug:
     var: openstack_networks
 
-- name: Gather facts about a previously created network by name
+- name: Gather facts about a previously created network
   os_networks_facts:
     name:  int_network
 
@@ -21,5 +21,14 @@
 - name: Gather facts about all servers
   os_server_facts:
     cloud: ospcloud
-- debug:
+
+- name: Show all servers 
+  debug:
     var: openstack_servers
+
+- name: Retrieve all available Openstack images
+  os_image_facts:
+
+- name: Show images
+  debug:
+    var: openstack_image
