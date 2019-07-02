@@ -15,6 +15,6 @@
     var: openstack_networks
 
 - name: Gather facts about ports
-- os_port_facts:
+  os_port_facts:
     cloud: ospcloud
 
