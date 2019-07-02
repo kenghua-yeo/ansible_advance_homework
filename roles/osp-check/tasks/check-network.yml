@@ -18,3 +18,8 @@
   os_port_facts:
     cloud: ospcloud
 
+- name: Gather facts about all servers
+  os_server_facts:
+    cloud: ospcloud
+- debug:
+    var: openstack_servers
