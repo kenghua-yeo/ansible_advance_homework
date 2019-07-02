@@ -1,0 +1,8 @@
+
+# Playbook to check OSP connection and network information
+
+- hosts: workstation
+  become: yes
+  roles:
+    - osp-check
+ 
