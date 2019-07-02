@@ -1,5 +1,6 @@
 ---
-# tasks file for roles/osp-instance-delete
-  - name: Fetch Instance Info
-  - name: Delete instances
-   
+# tasks file for osp-instance-delete
+- include_tasks: frontend.yml
+- include_tasks: app1.yml
+- include_tasks: app2.yml
+- include_tasks: db.yml
