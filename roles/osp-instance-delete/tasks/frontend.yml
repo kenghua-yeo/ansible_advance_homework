@@ -1,0 +1,12 @@
+- name: Remove floating IP to frontend
+  os_floating_ip:
+    cloud: ospcloud
+    state: absent
+    server: frontend
+    network: ext_network
+
+- name: Remove a server instance
+  os_server:
+    cloud: ospcloud
+    name: frontend
+    state: absent

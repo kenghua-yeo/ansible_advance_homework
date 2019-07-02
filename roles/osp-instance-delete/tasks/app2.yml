@@ -1,0 +1,13 @@
+- name: Remove floating IP to app2
+  os_floating_ip:
+    cloud: ospcloud
+    state: absent
+    server: app2
+    network: ext_network
+    
+- name: Remove app2 server instance
+  os_server:
+    cloud: ospcloud
+    name: app2
+    state: absent
+
