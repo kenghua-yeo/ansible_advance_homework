@@ -2,6 +2,7 @@
 #  hosts: localhost
 #  tasks:  
   - name: Fetch Instance Info
+    hosts: localhost
     os_server_facts:
       cloud: ospcloud
       region_name: RegionOne
