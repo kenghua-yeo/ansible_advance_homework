@@ -4,5 +4,5 @@
 #- include_tasks: create-flavor.yml
 #- include_tasks: create-keypair.yml
 #- include_tasks: create-sg.yml
-#- include_tasks: create-image.yml
 - include_tasks: check-network.yml
+- include_tasks: check-servers.yml
