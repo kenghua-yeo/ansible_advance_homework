@@ -20,7 +20,7 @@
     add_host:
       name: "{{ item.public_v4 }}"
       group: "{{ item.metadata.group }}"
-      ansible_ssh_private_key_file: /home/cloud-user/.ssh/openstack.pem
+      ansible_ssh_private_key_file: /home/cloud-user/.ssh/mykey.pem
       ansible_ssh_user: cloud-user
     with_items: "{{result.ansible_facts.openstack_servers}}"
 
@@ -28,7 +28,7 @@
     add_host:
       name: "{{ item.public_v4 }}"
       group: "{{ item.metadata.deployment_name }}"
-      ansible_ssh_private_key_file: /home/cloud-user/.ssh/openstack.pem
+      ansible_ssh_private_key_file: /home/cloud-user/.ssh/mykey.pem
       ansible_ssh_user: cloud-user
     with_items: "{{result.ansible_facts.openstack_servers}}"
              
@@ -36,5 +36,5 @@
   gather_facts: true
   tasks:
   - debug:
-      var1=ansible_hostname
-      var2=ansible_interfaces
+      var=ansible_hostname
+
