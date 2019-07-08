@@ -2,6 +2,7 @@
   os_server:
     cloud: ospcloud
     name: frontend
+    state: present
     image: rhel-guest
     meta: group=frontends,deployment_name=dev
     flavor: m2.small
@@ -12,6 +13,8 @@
     - net-name: int_network
     userdata: |
       #!/bin/bash
+      useradd testuser
+      passwd testuser
       curl -o /tmp/openstack.pub http://www.opentlc.com/download/ansible_bootcamp/openstack_keys/openstack.pub
       cat /tmp/openstack.pub >> /home/cloud-user/.ssh/authorized_keys
       curl -o /tmp/internal.repo http://www.opentlc.com/download/ansible_bootcamp/repo/internal.repo
